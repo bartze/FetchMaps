@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Rest Countries API</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>API Fetch</h1>
+      <form>
+        <div class="form-group">
+          <label for="continente">Continente</label>
+          <input
+            type="text"
+            class="form-control"
+            id="continente"
+            placeholder="Introduce continente"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">
+          Cargar países de continente
+        </button>
+      </form>
+      <hr />
+      <button type="button" class="btn btn-primary" id="cargarPaises">
+        Cargar todos los países
+      </button>
+
+      <div class="spinner-border" role="status" hidden>
+        <!--hidden a true es para que no se mmuestre las cabeceras sin información-->
+        <span class="visually-hidden">Cargando países</span>
+        <!--visually-hidden lee a los ciegos el texto cargardo paises-->
+      </div>
+
+      <table class="table" hidden>
+        <thead>
+          <tr>
+            <th scope="col">Bandera</th>
+            <th scope="col">País</th>
+            <th scope="col">Continente</th>
+            <th scope="col">Capital</th>
+            <th class="text-end" scope="col">Habitantes</th>
+            <th scope="col">Google_Maps</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>
